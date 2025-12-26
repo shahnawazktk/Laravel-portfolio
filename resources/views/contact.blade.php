@@ -4,138 +4,134 @@
 
 @section('content')
     <!-- Contact Hero -->
-    <section class="py-20 bg-gradient text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-5xl font-bold mb-6" data-aos="fade-up">Get In Touch</h1>
-            <p class="text-xl opacity-90 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-                Have a project in mind? Let's work together to bring your ideas to life.
-            </p>
-        </div>
-    </section>
+    <section id="contact"
+        class="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full filter blur-3xl animate-float"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl animate-float"
+            style="animation-delay: 2s;"></div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Contact Form -->
-                <div data-aos="fade-right">
-                    <h2 class="text-3xl font-bold mb-8">Send a Message</h2>
-                    
-                    <form id="contact-form" class="space-y-6">
-                        @csrf
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 mb-2">Full Name *</label>
-                                <input type="text" 
-                                       id="name" 
-                                       name="name" 
-                                       required 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                       placeholder="John Doe">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 mb-2">Email Address *</label>
-                                <input type="email" 
-                                       id="email" 
-                                       name="email" 
-                                       required 
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                       placeholder="john@example.com">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="subject" class="block text-gray-700 mb-2">Subject *</label>
-                            <input type="text" 
-                                   id="subject" 
-                                   name="subject" 
-                                   required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                   placeholder="Project Inquiry">
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-gray-700 mb-2">Message *</label>
-                            <textarea id="message" 
-                                      name="message" 
-                                      rows="6" 
-                                      required 
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                      placeholder="Tell me about your project..."></textarea>
-                        </div>
-                        
-                        <button type="submit" 
-                                class="btn-send px-8 py-4 bg-primary text-white font-medium rounded-lg hover:shadow-xl transition-all hover:scale-105 w-full">
-                            Send Message <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </form>
-                    
-                    <!-- Success Message (hidden by default) -->
-                    <div id="success-message" class="hidden mt-6 p-4 bg-green-100 text-green-800 rounded-lg">
-                        <i class="fas fa-check-circle mr-2"></i>
-                        <span>Thank you! Your message has been sent successfully.</span>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 glass rounded-full mb-6">
+                        <i class="fas fa-paper-plane text-emerald-400"></i>
+                        <span class="font-medium">Get In Touch</span>
                     </div>
+
+                    <h2 class="section-heading text-4xl md:text-5xl font-bold mb-6">
+                        <span class="text-white">Let's Work</span>
+                        <span class="block text-gradient">Together</span>
+                    </h2>
+
+                    <p class="text-gray-400 text-lg">
+                        Have a project in mind? I'd love to hear about it. Send me a message and let's discuss.
+                    </p>
                 </div>
-                
-                <!-- Contact Info -->
-                <div data-aos="fade-left">
-                    <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
-                    
-                    <div class="space-y-8">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+
+                <!-- Contact Content -->
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="glass rounded-3xl p-8" data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                        placeholder="Your Name">
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium mb-2">Email</label>
+                                    <input type="email"
+                                        class="w-full px-4 py-3 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                        placeholder="your@email.com">
+                                </div>
                             </div>
+
                             <div>
-                                <h3 class="text-lg font-bold mb-1">Location</h3>
-                                <p class="text-gray-600">San Francisco, California</p>
+                                <label class="block text-sm font-medium mb-2">Subject</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                    placeholder="Project Inquiry">
                             </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-envelope text-primary text-xl"></i>
-                            </div>
+
                             <div>
-                                <h3 class="text-lg font-bold mb-1">Email</h3>
-                                <p class="text-gray-600">hello@example.com</p>
+                                <label class="block text-sm font-medium mb-2">Message</label>
+                                <textarea rows="5" class="w-full px-4 py-3 glass rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                                    placeholder="Tell me about your project..."></textarea>
                             </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-phone text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold mb-1">Phone</h3>
-                                <p class="text-gray-600">+1 (555) 123-4567</p>
-                            </div>
-                        </div>
+
+                            <button type="submit"
+                                class="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold hover-glow hover-lift transition-all duration-300">
+                                Send Message
+                            </button>
+                        </form>
                     </div>
-                    
-                    <!-- Map Placeholder -->
-                    <div class="mt-12 rounded-xl overflow-hidden shadow-lg">
-                        <div class="h-64 bg-gray-200 flex items-center justify-center">
-                            <i class="fas fa-map text-4xl text-gray-400"></i>
+
+                    <!-- Contact Info -->
+                    <div data-aos="fade-left">
+                        <div class="space-y-6 mb-8">
+                            <!-- Info 1 -->
+                            <div class="flex items-start gap-4 glass p-6 rounded-2xl">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <a href="mailto:shahnawaz@example.com"
+                                        class="text-gray-400 hover:text-white transition-colors">
+                                        shahnawaz@example.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Info 2 -->
+                            <div class="flex items-start gap-4 glass p-6 rounded-2xl">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <a href="tel:+923001234567" class="text-gray-400 hover:text-white transition-colors">
+                                        +92 300 1234567
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Info 3 -->
+                            <div class="flex items-start gap-4 glass p-6 rounded-2xl">
+                                <div
+                                    class="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Location</h4>
+                                    <p class="text-gray-400">Gurguri Karak, KPK Pakistan</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <!-- Social Links -->
-                    <div class="mt-8">
-                        <h3 class="text-xl font-bold mb-4">Follow Me</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
-                                <i class="fab fa-instagram"></i>
-                            </a>
+
+                        <!-- Availability -->
+                        <div class="glass rounded-2xl p-6">
+                            <h4 class="font-bold mb-4">Current Availability</h4>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="relative">
+                                    <span
+                                        class="absolute inset-0 animate-ping bg-emerald-400 rounded-full opacity-75"></span>
+                                    <span class="relative block w-3 h-3 bg-emerald-500 rounded-full"></span>
+                                </div>
+                                <span class="font-medium">Available for freelance projects</span>
+                            </div>
+                            <p class="text-sm text-gray-400">
+                                I'm currently accepting new projects and available for full-time opportunities.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -145,36 +141,36 @@
 @endsection
 
 @push('scripts')
-<script>
-    // Contact form submission
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const form = this;
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        
-        // Show loading state
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
-        submitBtn.disabled = true;
-        
-        // Simulate form submission (replace with actual AJAX call)
-        setTimeout(() => {
-            // Show success message
-            document.getElementById('success-message').classList.remove('hidden');
-            
-            // Reset form
-            form.reset();
-            
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            
-            // Hide success message after 5 seconds
+    <script>
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = this;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate form submission (replace with actual AJAX call)
             setTimeout(() => {
-                document.getElementById('success-message').classList.add('hidden');
-            }, 5000);
-        }, 1500);
-    });
-</script>
+                // Show success message
+                document.getElementById('success-message').classList.remove('hidden');
+
+                // Reset form
+                form.reset();
+
+                // Reset button
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    document.getElementById('success-message').classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+    </script>
 @endpush

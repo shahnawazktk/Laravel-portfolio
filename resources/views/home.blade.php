@@ -4,183 +4,158 @@
 
 @section('content')
     <!-- Hero Section with Advanced Animations -->
-    <section
-        class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <!-- Animated Background Grid -->
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0"
-                style="background-image: linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px); background-size: 50px 50px;">
+    <section id="home"
+        class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <!-- Animated Background -->
+        <div class="absolute inset-0">
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+                        background-size: 50px 50px;">
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-        </div>
 
-        <!-- Floating Orbs -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full filter blur-3xl animate-float"
-                style="animation-delay: 0s;"></div>
-            <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full filter blur-3xl animate-float"
+            <!-- Floating Orbs -->
+            <div
+                class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/20 rounded-full filter blur-3xl animate-float animate-pulse-glow">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl animate-float"
                 style="animation-delay: 2s;"></div>
-            <div class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-500/30 rounded-full filter blur-3xl animate-float"
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500/10 rounded-full filter blur-3xl animate-float"
                 style="animation-delay: 4s;"></div>
         </div>
 
         <!-- Hero Content -->
-        <div class="container relative z-10 mx-auto px-4 py-20">
+        <div class="relative z-10 container mx-auto px-6 py-16">
             <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <!-- Text Content -->
-                    <div class="text-white space-y-8" data-aos="fade-right">
-                        <!-- Animated Badge -->
-                        <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl"
-                            data-aos="fade-down" data-aos-delay="100">
-                            <span class="relative flex h-3 w-3">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Left Column -->
+                    <div class="text-white" data-aos="fade-right" data-aos-duration="1000">
+                        <!-- Badge -->
+                        <div class="inline-flex items-center gap-2 px-4 py-2 glass rounded-full mb-8 animate-slide-in">
+                            <span class="relative flex h-2 w-2">
                                 <span
                                     class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                             </span>
-                            <span class="text-sm font-semibold tracking-wide">Available for Freelance</span>
-                            <span
-                                class="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-bold rounded-full">NEW</span>
+                            <span class="text-sm font-medium">Available for Projects</span>
                         </div>
 
-                        <!-- Main Heading with Typing Effect -->
-                        <div class="space-y-4">
-                            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                                <span class="block" data-aos="fade-up" data-aos-delay="200">Hi, I'm</span>
-                                <span
-                                    class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-gradient"
-                                    data-aos="fade-up" data-aos-delay="300">Shah Nawaz</span>
-                            </h1>
-                            <div class="flex items-center gap-4" data-aos="fade-up" data-aos-delay="400">
-                                <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-                                <p class="text-2xl md:text-3xl text-gray-300 font-light">Full Stack Developer</p>
+                        <!-- Main Heading -->
+                        <h1 class="hero-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                            <span class="block text-gray-300">Hi, I'm</span>
+                            <span class="block text-gradient animate-gradient">Shah Nawaz</span>
+                            <span class="block text-gray-300 mt-4 text-2xl md:text-3xl">Full Stack Developer</span>
+                        </h1>
+
+                        <!-- Description -->
+                        <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
+                            I build <span class="text-purple-400 font-semibold">scalable web applications</span> using
+                            Laravel, Vue.js, and modern technologies. Passionate about clean code, performance optimization,
+                            and creating exceptional user experiences.
+                        </p>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10 stats-grid">
+                            <div class="glass p-6 rounded-2xl hover-lift transition-all duration-300">
+                                <div class="text-3xl font-bold text-gradient mb-2">50+</div>
+                                <div class="text-gray-400 text-sm uppercase tracking-wider">Projects</div>
+                            </div>
+                            <div class="glass p-6 rounded-2xl hover-lift transition-all duration-300">
+                                <div class="text-3xl font-bold text-gradient mb-2">5+</div>
+                                <div class="text-gray-400 text-sm uppercase tracking-wider">Years Exp</div>
+                            </div>
+                            <div class="glass p-6 rounded-2xl hover-lift transition-all duration-300">
+                                <div class="text-3xl font-bold text-gradient mb-2">98%</div>
+                                <div class="text-gray-400 text-sm uppercase tracking-wider">Satisfaction</div>
                             </div>
                         </div>
 
-                        <!-- Description -->
-                        <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl" data-aos="fade-up"
-                            data-aos-delay="500">
-                            I craft <span class="text-purple-400 font-semibold">exceptional digital experiences</span> that
-                            merge creativity with cutting-edge technology. Specializing in Laravel, Vue.js, and modern web
-                            architecture.
-                        </p>
-
-                        <!-- Stats Counter -->
-                        <div class="grid grid-cols-3 gap-6 py-8" data-aos="fade-up" data-aos-delay="600">
-                            @foreach ([['count' => '50+', 'label' => 'Projects'], ['count' => '5+', 'label' => 'Years Exp'], ['count' => '98%', 'label' => 'Satisfaction']] as $stat)
-                                <div class="group relative">
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300">
-                                    </div>
-                                    <div
-                                        class="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
-                                        <div
-                                            class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2">
-                                            {{ $stat['count'] }}</div>
-                                        <div class="text-sm text-gray-400 uppercase tracking-wider">{{ $stat['label'] }}
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-
                         <!-- CTA Buttons -->
-                        <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="700">
-                            <a href="{{ route('portfolio.index') }}"
-                                class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 overflow-hidden">
-                                <span class="relative z-10 flex items-center gap-3">
-                                    <span>Explore My Work</span>
-                                    <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
-                                </span>
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#portfolio"
+                                class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white hover-glow hover-lift transition-all duration-300 inline-flex items-center gap-3">
+                                <span>View My Work</span>
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                             </a>
                             <a href="#contact"
-                                class="group px-8 py-4 backdrop-blur-xl bg-white/10 border-2 border-white/20 rounded-full font-semibold text-white hover:bg-white/20 transition-all duration-300 hover:scale-105 flex items-center gap-3">
+                                class="group px-8 py-4 glass rounded-full font-semibold text-white hover:bg-white/10 transition-all duration-300 inline-flex items-center gap-3">
                                 <i class="fas fa-paper-plane"></i>
                                 <span>Get In Touch</span>
                             </a>
                         </div>
                     </div>
 
-                    <!-- 3D Card Profile -->
-                    <div class="relative" data-aos="fade-left" data-aos-delay="400">
-                        <div class="relative perspective-1000">
+                    <!-- Right Column - Profile Card -->
+                    <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="perspective-1000">
                             <!-- Main Card -->
                             <div
-                                class="relative backdrop-blur-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 shadow-2xl transform-gpu hover:scale-105 transition-all duration-500">
+                                class="relative glass rounded-3xl p-8 shadow-2xl hover-lift transition-all duration-500 overflow-hidden">
                                 <!-- Animated Border -->
                                 <div
-                                    class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 blur-xl group-hover:opacity-50 transition-opacity duration-500">
+                                    class="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500">
                                 </div>
 
-                                <!-- Profile Image with Frame -->
+                                <!-- Profile Image -->
                                 <div class="relative mb-8">
-                                    <div class="relative w-72 h-72 mx-auto">
-                                        <!-- Rotating Ring -->
+                                    <div class="relative w-64 h-64 mx-auto">
+                                        <!-- Rotating Border -->
                                         <div
                                             class="absolute inset-0 rounded-full border-4 border-dashed border-purple-500/30 animate-spin-slow">
                                         </div>
 
-                                        <!-- Image Container -->
-                                        <div
-                                            class="absolute inset-4 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
-                                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80"
-                                                alt="Alex Morgan" class="w-full h-full object-cover">
-                                            <div
-                                                class="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent">
+                                        <!-- Image -->
+                                        <div class="absolute inset-4 rounded-full overflow-hidden border-4 border-white/10">
+                                            <img src="{{ asset('assets/img/pic.jpeg') }}" alt="Shah Nawaz"
+                                                class="w-full h-full object-cover">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent">
                                             </div>
                                         </div>
 
-                                        <!-- Status Indicator -->
+                                        <!-- Status Badge -->
                                         <div
-                                            class="absolute bottom-8 right-8 flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-emerald-500/20 border border-emerald-500/30 rounded-full">
-                                            <span class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></span>
-                                            <span class="text-sm font-semibold text-emerald-300">Online</span>
+                                            class="absolute bottom-4 right-4 flex items-center gap-2 px-3 py-1 glass rounded-full">
+                                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                                            <span class="text-xs font-medium text-emerald-300">Online</span>
                                         </div>
                                     </div>
                                 </div>
 
-                                <!-- Info Section -->
-                                <div class="text-center space-y-6">
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-white mb-2">Shah Nawaz</h3>
-                                        <p class="text-purple-300 font-medium mb-4">Senior Full Stack Developer</p>
-                                        <p class="text-gray-400 text-sm">🌍 Gurguri Karak, Kpk Pakistan</p>
-                                    </div>
+                                <!-- Profile Info -->
+                                <div class="text-center space-y-4">
+                                    <h3 class="text-2xl font-bold text-white">Shah Nawaz</h3>
+                                    <p class="text-purple-300 font-medium">Senior Full Stack Developer</p>
+                                    <p class="text-gray-400 text-sm">📍 Gurguri Karak, KPK Pakistan</p>
 
-                                    <!-- Tech Stack Pills -->
-                                    <div class="flex flex-wrap justify-center gap-2">
-                                        @foreach (['Html', 'Css', 'Js','Bootstrap','Mysql', 'Tailwind', 'Node.js', 'Laravel'] as $tech)
-                                            <span
-                                                class="px-4 py-2 backdrop-blur-xl bg-white/10 border border-white/20 rounded-full text-sm font-medium text-white hover:bg-white/20 transition-all duration-300 hover:scale-110 cursor-default">
-                                                {{ $tech }}
-                                            </span>
+                                    <!-- Tech Stack -->
+                                    <div class="flex flex-wrap justify-center gap-2 pt-4">
+                                        @foreach (['Laravel', 'Vue.js', 'React', 'Node.js', 'MySQL', 'Tailwind', 'AWS'] as $tech)
+                                            <span class="px-3 py-1 glass text-xs rounded-full">{{ $tech }}</span>
                                         @endforeach
                                     </div>
 
                                     <!-- Social Links -->
-                                    <div class="flex justify-center gap-3 pt-4">
-                                        @foreach ([['icon' => 'fab fa-github', 'color' => 'hover:bg-gray-700', 'gradient' => 'from-gray-600 to-gray-800'], ['icon' => 'fab fa-linkedin', 'color' => 'hover:bg-blue-600', 'gradient' => 'from-blue-500 to-blue-700'], ['icon' => 'fab fa-twitter', 'color' => 'hover:bg-sky-500', 'gradient' => 'from-sky-400 to-sky-600'], ['icon' => 'fab fa-dribbble', 'color' => 'hover:bg-pink-600', 'gradient' => 'from-pink-500 to-pink-700']] as $social)
-                                            <a href="#"
-                                                class="group relative w-12 h-12 backdrop-blur-xl bg-white/10 border border-white/20 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 overflow-hidden">
-                                                <i class="{{ $social['icon'] }} text-lg relative z-10"></i>
-                                                <div
-                                                    class="absolute inset-0 bg-gradient-to-r {{ $social['gradient'] }} opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                </div>
-                                            </a>
-                                        @endforeach
+                                    <div class="flex justify-center gap-4 pt-6">
+                                        <a href="#"
+                                            class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#"
+                                            class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
+                                            <i class="fab fa-codepen"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Floating Elements -->
-                            <div
-                                class="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur-2xl animate-pulse">
-                            </div>
-                            <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 blur-2xl animate-pulse"
-                                style="animation-delay: 1s;"></div>
                         </div>
                     </div>
                 </div>
@@ -188,423 +163,567 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20" data-aos="fade-up" data-aos-delay="1000">
-            <a href="#services"
-                class="flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors group">
-                <span class="text-sm font-medium">Scroll Down</span>
-                <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-2">
-                    <div class="w-1 h-2 bg-white rounded-full animate-bounce"></div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <a href="#about" class="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
+                <span class="text-sm mb-2">Scroll Down</span>
+                <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center p-1">
+                    <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
                 </div>
             </a>
         </div>
     </section>
 
     <!-- Services Section with Card Animations -->
-    <section id="services" class="py-32 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
-        <!-- Background Pattern -->
+    <section id="services" class="py-24 bg-slate-800 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5">
             <div class="absolute inset-0"
-                style="background-image: radial-gradient(circle, #8b5cf6 1px, transparent 1px); background-size: 40px 40px;">
+                style="background-image: radial-gradient(circle, #8b5cf6 1px, transparent 1px);
+                        background-size: 40px 40px;">
             </div>
         </div>
 
-        <div class="container mx-auto px-4 relative z-10">
+        <div class="container mx-auto px-6 relative z-10">
             <!-- Section Header -->
-            <div class="max-w-4xl mx-auto text-center mb-20" data-aos="fade-up">
-                <div
-                    class="inline-flex items-center gap-3 px-6 py-3 backdrop-blur-xl bg-white/5 border border-white/10 rounded-full mb-6">
-                    <i class="fas fa-sparkles text-yellow-400"></i>
-                    <span class="text-white font-semibold">What I Do Best</span>
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 px-4 py-2 glass rounded-full mb-6">
+                    <i class="fas fa-cog text-yellow-400"></i>
+                    <span class="font-medium">My Services</span>
                 </div>
-                <h2 class="text-5xl md:text-6xl font-bold mb-6">
-                    <span class="text-white">My</span>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-                        Services</span>
+
+                <h2 class="section-heading text-4xl md:text-5xl font-bold mb-6">
+                    <span class="text-white">What I</span>
+                    <span class="text-gradient">Offer</span>
                 </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                    Delivering world-class solutions from conception to deployment, crafted with precision and passion.
+
+                <p class="text-gray-400 text-lg">
+                    Comprehensive web development services tailored to your business needs
                 </p>
             </div>
 
             <!-- Services Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                @php
-                    $services = [
-                        [
-                            'icon' => 'fas fa-code',
-                            'title' => 'Web Development',
-                            'description' =>
-                                'Full-stack applications with Laravel, Vue.js, and cutting-edge frameworks.',
-                            'features' => ['RESTful APIs', 'Real-time Apps', 'Microservices'],
-                            'gradient' => 'from-blue-500 to-cyan-500',
-                            'iconBg' => 'from-blue-500/20 to-cyan-500/20',
-                        ],
-                        [
-                            'icon' => 'fas fa-mobile-screen',
-                            'title' => 'Mobile Apps',
-                            'description' => 'Native and cross-platform mobile solutions for iOS and Android.',
-                            'features' => ['React Native', 'Flutter', 'PWA'],
-                            'gradient' => 'from-purple-500 to-pink-500',
-                            'iconBg' => 'from-purple-500/20 to-pink-500/20',
-                        ],
-                        [
-                            'icon' => 'fas fa-palette',
-                            'title' => 'UI/UX Design',
-                            'description' => 'Beautiful, intuitive interfaces that users love and remember.',
-                            'features' => ['User Research', 'Prototyping', 'Design Systems'],
-                            'gradient' => 'from-pink-500 to-rose-500',
-                            'iconBg' => 'from-pink-500/20 to-rose-500/20',
-                        ],
-                        [
-                            'icon' => 'fas fa-database',
-                            'title' => 'Backend Solutions',
-                            'description' => 'Robust, scalable backend architecture and database optimization.',
-                            'features' => ['API Design', 'Database Optimization', 'Cloud Infrastructure'],
-                            'gradient' => 'from-emerald-500 to-teal-500',
-                            'iconBg' => 'from-emerald-500/20 to-teal-500/20',
-                        ],
-                        [
-                            'icon' => 'fas fa-rocket',
-                            'title' => 'DevOps & Cloud',
-                            'description' => 'CI/CD pipelines, containerization, and cloud infrastructure setup.',
-                            'features' => ['Docker', 'Kubernetes', 'AWS/Azure'],
-                            'gradient' => 'from-orange-500 to-red-500',
-                            'iconBg' => 'from-orange-500/20 to-red-500/20',
-                        ],
-                        [
-                            'icon' => 'fas fa-chart-line',
-                            'title' => 'Tech Consulting',
-                            'description' => 'Strategic guidance on technology decisions and best practices.',
-                            'features' => ['Code Audits', 'Tech Strategy', 'Team Training'],
-                            'gradient' => 'from-indigo-500 to-purple-500',
-                            'iconBg' => 'from-indigo-500/20 to-purple-500/20',
-                        ],
-                    ];
-                @endphp
-
-                @foreach ($services as $index => $service)
-                    <div class="group relative" data-aos="fade-up" data-aos-delay="{{ $index * 100 }}">
-                        <!-- Glow Effect -->
-                        <div
-                            class="absolute inset-0 bg-gradient-to-r {{ $service['gradient'] }} rounded-3xl opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500">
-                        </div>
-
-                        <!-- Card -->
-                        <div
-                            class="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 h-full">
-                            <!-- Icon -->
-                            <div class="relative mb-6">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-r {{ $service['iconBg'] }} rounded-2xl blur-xl">
-                                </div>
-                                <div
-                                    class="relative w-20 h-20 bg-gradient-to-r {{ $service['gradient'] }} rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                                    <i class="{{ $service['icon'] }} text-3xl text-white"></i>
-                                </div>
-                            </div>
-
-                            <!-- Content -->
-                            <h3
-                                class="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r {{ $service['gradient'] }} transition-all duration-300">
-                                {{ $service['title'] }}
-                            </h3>
-                            <p class="text-gray-400 mb-6 leading-relaxed">{{ $service['description'] }}</p>
-
-                            <!-- Features -->
-                            <ul class="space-y-3 mb-6">
-                                @foreach ($service['features'] as $feature)
-                                    <li class="flex items-center text-gray-300">
-                                        <div
-                                            class="w-2 h-2 bg-gradient-to-r {{ $service['gradient'] }} rounded-full mr-3">
-                                        </div>
-                                        {{ $feature }}
-                                    </li>
-                                @endforeach
-                            </ul>
-
-                            <!-- CTA -->
-                            <a href="{{ route('contact') }}"
-                                class="inline-flex items-center text-white font-semibold group/link">
-                                <span
-                                    class="bg-gradient-to-r {{ $service['gradient'] }} bg-clip-text text-transparent">Learn
-                                    More</span>
-                                <i
-                                    class="fas fa-arrow-right ml-2 text-white transition-transform group-hover/link:translate-x-2"></i>
-                            </a>
-                        </div>
+                <!-- Service 1 -->
+                <div class="group glass rounded-3xl p-8 hover-lift transition-all duration-500" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-code text-2xl text-white"></i>
                     </div>
-                @endforeach
+
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray-400 mb-6">
+                        Custom web applications built with Laravel, Vue.js, and modern frameworks.
+                    </p>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            RESTful APIs
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Real-time Applications
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            E-commerce Solutions
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group glass rounded-3xl p-8 hover-lift transition-all duration-500" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-mobile-alt text-2xl text-white"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">Mobile Apps</h3>
+                    <p class="text-gray-400 mb-6">
+                        Cross-platform mobile applications using React Native and Flutter.
+                    </p>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            React Native
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            iOS & Android
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            PWA Development
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group glass rounded-3xl p-8 hover-lift transition-all duration-500" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-database text-2xl text-white"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">Backend Solutions</h3>
+                    <p class="text-gray-400 mb-6">
+                        Scalable backend architecture and database design for high-performance applications.
+                    </p>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            API Development
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Database Design
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Microservices
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group glass rounded-3xl p-8 hover-lift transition-all duration-500" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cloud text-2xl text-white"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">DevOps & Cloud</h3>
+                    <p class="text-gray-400 mb-6">
+                        CI/CD pipelines, containerization, and cloud infrastructure management.
+                    </p>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Docker & Kubernetes
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            AWS & Azure
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            CI/CD Automation
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="group glass rounded-3xl p-8 hover-lift transition-all duration-500" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-paint-brush text-2xl text-white"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-400 mb-6">
+                        Beautiful, intuitive user interfaces that enhance user experience and engagement.
+                    </p>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Wireframing
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Prototyping
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            User Testing
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="group glass rounded-3xl p-8 hover-lift transition-all duration-500" data-aos="fade-up"
+                    data-aos-delay="600">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chart-line text-2xl text-white"></i>
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-4">Tech Consulting</h3>
+                    <p class="text-gray-400 mb-6">
+                        Strategic technology advice and code audits to optimize your development process.
+                    </p>
+
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Code Audits
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Performance Optimization
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check text-emerald-400 mr-2"></i>
+                            Tech Stack Selection
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
+
+
     <!-- Featured Projects with Parallax -->
-    <section id="projects" class="py-32 bg-slate-800 relative overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
+    <section id="portfolio" class="py-24 bg-slate-900 relative overflow-hidden">
+        <div class="container mx-auto px-6">
             <!-- Section Header -->
-            <div class="max-w-4xl mx-auto text-center mb-20" data-aos="fade-up">
-                <div
-                    class="inline-flex items-center gap-3 px-6 py-3 backdrop-blur-xl bg-white/5 border border-white/10 rounded-full mb-6">
+            <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+                <div class="inline-flex items-center gap-3 px-4 py-2 glass rounded-full mb-6">
                     <i class="fas fa-briefcase text-blue-400"></i>
-                    <span class="text-white font-semibold">Portfolio Showcase</span>
+                    <span class="font-medium">My Work</span>
                 </div>
-                <h2 class="text-5xl md:text-6xl font-bold mb-6">
+
+                <h2 class="section-heading text-4xl md:text-5xl font-bold mb-6">
                     <span class="text-white">Featured</span>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                        Projects</span>
+                    <span class="text-gradient">Projects</span>
                 </h2>
+
+                <p class="text-gray-400 text-lg">
+                    A selection of my recent work showcasing different technologies and solutions
+                </p>
+            </div>
+
+            <!-- Portfolio Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button
+                    class="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-medium">All</button>
+                <button class="px-6 py-2 glass rounded-full font-medium hover:bg-white/10 transition-colors">Web
+                    Apps</button>
+                <button
+                    class="px-6 py-2 glass rounded-full font-medium hover:bg-white/10 transition-colors">Mobile</button>
+                <button
+                    class="px-6 py-2 glass rounded-full font-medium hover:bg-white/10 transition-colors">E-commerce</button>
+                <button class="px-6 py-2 glass rounded-full font-medium hover:bg-white/10 transition-colors">SAAS</button>
             </div>
 
             <!-- Projects Grid -->
-            @php
-                $projects = [
-                    [
-                        'title' => 'E-Commerce Platform',
-                        'category' => 'Web Application',
-                        'description' => 'Modern online marketplace with advanced features',
-                        'image' => 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
-                        'tags' => ['Laravel', 'Vue.js', 'Stripe'],
-                        'gradient' => 'from-blue-600 to-purple-600',
-                    ],
-                    [
-                        'title' => 'Project Dashboard',
-                        'category' => 'SaaS Platform',
-                        'description' => 'Real-time collaborative workspace',
-                        'image' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-                        'tags' => ['React', 'Node.js', 'MongoDB'],
-                        'gradient' => 'from-purple-600 to-pink-600',
-                    ],
-                    [
-                        'title' => 'Fitness Tracker',
-                        'category' => 'Mobile App',
-                        'description' => 'AI-powered workout and nutrition planner',
-                        'image' => 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80',
-                        'tags' => ['React Native', 'Firebase'],
-                        'gradient' => 'from-emerald-600 to-teal-600',
-                    ],
-                ];
-            @endphp
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Project 1 -->
+                <div class="group project-card glass rounded-3xl overflow-hidden hover-lift transition-all duration-500"
+                    data-aos="fade-up">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="E-commerce Platform"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent">
+                        </div>
 
-            <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                @foreach ($projects as $index => $project)
-                    <div class="project-card group relative" data-aos="fade-up" data-aos-delay="{{ $index * 150 }}">
-                        <!-- Card Container -->
-                        <div
-                            class="relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
-                            <!-- Image Container -->
-                            <div class="relative h-64 overflow-hidden">
-                                <img src="{{ $project['image'] }}" alt="{{ $project['title'] }}"
-                                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500">
-                                </div>
-
-                                <!-- Overlay Content -->
-                                <div class="absolute inset-0 flex items-end p-6">
-                                    <div class="flex flex-wrap gap-2">
-                                        @foreach ($project['tags'] as $tag)
-                                            <span
-                                                class="px-3 py-1 backdrop-blur-xl bg-white/20 border border-white/30 text-white text-xs font-semibold rounded-full">
-                                                {{ $tag }}
-                                            </span>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Content -->
-                            <div class="p-6 space-y-4">
-                                <div>
-                                    <span
-                                        class="inline-block px-4 py-1 bg-gradient-to-r {{ $project['gradient'] }} text-white text-sm font-semibold rounded-full mb-3">
-                                        {{ $project['category'] }}
-                                    </span>
-                                    <h3
-                                        class="text-2xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r {{ $project['gradient'] }} transition-all duration-300">
-                                        {{ $project['title'] }}
-                                    </h3>
-                                    <p class="text-gray-400">{{ $project['description'] }}</p>
-                                </div>
-
-                                <a href="#"
-                                    class="inline-flex items-center gap-2 text-white font-semibold group/link">
-                                    <span
-                                        class="bg-gradient-to-r {{ $project['gradient'] }} bg-clip-text text-transparent">View
-                                        Project</span>
-                                    <i
-                                        class="fas fa-arrow-right text-white transition-transform group-hover/link:translate-x-2"></i>
-                                </a>
-                            </div>
+                        <!-- Tags -->
+                        <div class="absolute bottom-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 glass text-xs rounded-full">Laravel</span>
+                            <span class="px-3 py-1 glass text-xs rounded-full">Vue.js</span>
                         </div>
                     </div>
-                @endforeach
+
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">E-commerce Platform</h3>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+
+                        <p class="text-gray-400 mb-6">
+                            Complete online marketplace with payment integration and admin dashboard.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-medium text-purple-400 hover:text-purple-300">
+                            View Details
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group project-card glass rounded-3xl overflow-hidden hover-lift transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Project Management"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent">
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="absolute bottom-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 glass text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 glass text-xs rounded-full">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Project Management</h3>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+
+                        <p class="text-gray-400 mb-6">
+                            Real-time collaboration tool with task management and team communication.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-medium text-purple-400 hover:text-purple-300">
+                            View Details
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group project-card glass rounded-3xl overflow-hidden hover-lift transition-all duration-500"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Fitness App"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent">
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="absolute bottom-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 glass text-xs rounded-full">React Native</span>
+                            <span class="px-3 py-1 glass text-xs rounded-full">Firebase</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Fitness Tracker</h3>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+
+                        <p class="text-gray-400 mb-6">
+                            Mobile app with workout plans, nutrition tracking, and progress analytics.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center text-sm font-medium text-purple-400 hover:text-purple-300">
+                            View Details
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <!-- View All Button -->
-            <div class="text-center mt-16" data-aos="fade-up">
-                <a href="{{ route('portfolio.index') }}"
-                    class="group inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
-                    <span>Explore All Projects</span>
-                    <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+            <!-- View More Button -->
+            <div class="text-center mt-16">
+                <a href="#"
+                    class="inline-flex items-center gap-3 px-8 py-4 glass rounded-full font-semibold hover-lift transition-all duration-300">
+                    <span>View All Projects</span>
+                    <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Skills Section with Interactive Elements -->
-    <section id="skills" class="py-32 bg-gradient-to-b from-slate-800 to-slate-900 relative overflow-hidden">
-        <div class="container mx-auto px-4 relative z-10">
+    <section id="skills" class="py-24 bg-slate-800 relative overflow-hidden">
+        <div class="container mx-auto px-6">
             <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <!-- Left: Skills Progress -->
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <!-- Left Column -->
                     <div data-aos="fade-right">
-                        <div
-                            class="inline-flex items-center gap-3 px-6 py-3 backdrop-blur-xl bg-white/5 border border-white/10 rounded-full mb-6">
+                        <div class="inline-flex items-center gap-3 px-4 py-2 glass rounded-full mb-6">
                             <i class="fas fa-brain text-purple-400"></i>
-                            <span class="text-white font-semibold">My Expertise</span>
+                            <span class="font-medium">My Skills</span>
                         </div>
 
-                        <h2 class="text-5xl font-bold mb-6">
+                        <h2 class="section-heading text-4xl md:text-5xl font-bold mb-8">
                             <span class="text-white">Technical</span>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                                Skills</span>
+                            <span class="block text-gradient">Expertise</span>
                         </h2>
 
-                        <p class="text-xl text-gray-400 mb-12 leading-relaxed">
-                            Mastering the full spectrum of modern web development with years of hands-on experience.
+                        <p class="text-gray-400 text-lg mb-12 leading-relaxed">
+                            Mastery of modern web technologies and frameworks with years of hands-on experience
                         </p>
 
+                        <!-- Skills Progress -->
                         <div class="space-y-8">
-                            @php
-                                $skills = [
-                                    ['name' => 'Laravel & PHP', 'level' => 95, 'color' => 'from-red-500 to-orange-500'],
-                                    [
-                                        'name' => 'Vue.js & React',
-                                        'level' => 92,
-                                        'color' => 'from-green-500 to-emerald-500',
-                                    ],
-                                    [
-                                        'name' => 'JavaScript/TypeScript',
-                                        'level' => 90,
-                                        'color' => 'from-yellow-500 to-orange-500',
-                                    ],
-                                    [
-                                        'name' => 'Database Design',
-                                        'level' => 88,
-                                        'color' => 'from-blue-500 to-cyan-500',
-                                    ],
-                                    [
-                                        'name' => 'DevOps & Cloud',
-                                        'level' => 85,
-                                        'color' => 'from-purple-500 to-pink-500',
-                                    ],
-                                ];
-                            @endphp
-
-                            @foreach ($skills as $skill)
-                                <div class="skill-item group">
-                                    <div class="flex justify-between items-center mb-3">
-                                        <span class="text-lg font-semibold text-white">{{ $skill['name'] }}</span>
-                                        <span
-                                            class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r {{ $skill['color'] }}">{{ $skill['level'] }}%</span>
-                                    </div>
-                                    <div
-                                        class="relative h-3 bg-white/5 rounded-full overflow-hidden backdrop-blur-xl border border-white/10">
-                                        <div class="skill-bar absolute inset-y-0 left-0 bg-gradient-to-r {{ $skill['color'] }} rounded-full transition-all duration-1000 ease-out shadow-lg"
-                                            style="width: 0%" data-width="{{ $skill['level'] }}%"></div>
-                                        <div
-                                            class="absolute inset-0 bg-gradient-to-r {{ $skill['color'] }} opacity-20 blur-sm">
-                                        </div>
-                                    </div>
+                            <!-- Skill 1 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Laravel & PHP</span>
+                                    <span class="font-bold text-blue-400">95%</span>
                                 </div>
-                            @endforeach
+                                <div class="h-2 glass rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
+                                        style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill 2 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Vue.js & React</span>
+                                    <span class="font-bold text-purple-400">92%</span>
+                                </div>
+                                <div class="h-2 glass rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                                        style="width: 92%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill 3 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">JavaScript/TypeScript</span>
+                                    <span class="font-bold text-yellow-400">90%</span>
+                                </div>
+                                <div class="h-2 glass rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full"
+                                        style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill 4 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">Database Design</span>
+                                    <span class="font-bold text-emerald-400">88%</span>
+                                </div>
+                                <div class="h-2 glass rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full"
+                                        style="width: 88%"></div>
+                                </div>
+                            </div>
+
+                            <!-- Skill 5 -->
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="font-medium">DevOps & Cloud</span>
+                                    <span class="font-bold text-indigo-400">85%</span>
+                                </div>
+                                <div class="h-2 glass rounded-full overflow-hidden">
+                                    <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
+                                        style="width: 85%"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Right: Tech Stack -->
+                    <!-- Right Column -->
                     <div data-aos="fade-left">
-                        <div
-                            class="relative backdrop-blur-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-10 shadow-2xl">
-                            <h3 class="text-3xl font-bold text-white mb-10 text-center">Technology Stack</h3>
+                        <div class="glass rounded-3xl p-8">
+                            <h3 class="text-2xl font-bold mb-8 text-center">Technology Stack</h3>
 
-                            <div class="grid grid-cols-3 gap-6">
-                                @php
-                                    $technologies = [
-                                        [
-                                            'icon' => 'fab fa-laravel',
-                                            'name' => 'Laravel',
-                                            'color' => 'from-red-500 to-orange-600',
-                                        ],
-                                        [
-                                            'icon' => 'fab fa-vuejs',
-                                            'name' => 'Vue.js',
-                                            'color' => 'from-green-500 to-emerald-600',
-                                        ],
-                                        [
-                                            'icon' => 'fab fa-react',
-                                            'name' => 'React',
-                                            'color' => 'from-blue-500 to-cyan-600',
-                                        ],
-                                        [
-                                            'icon' => 'fab fa-js',
-                                            'name' => 'JavaScript',
-                                            'color' => 'from-yellow-500 to-orange-600',
-                                        ],
-                                        [
-                                            'icon' => 'fab fa-php',
-                                            'name' => 'PHP',
-                                            'color' => 'from-purple-500 to-indigo-600',
-                                        ],
-                                        [
-                                            'icon' => 'fas fa-database',
-                                            'name' => 'MySQL',
-                                            'color' => 'from-blue-600 to-indigo-600',
-                                        ],
-                                        [
-                                            'icon' => 'fab fa-docker',
-                                            'name' => 'Docker',
-                                            'color' => 'from-blue-500 to-sky-600',
-                                        ],
-                                        [
-                                            'icon' => 'fab fa-aws',
-                                            'name' => 'AWS',
-                                            'color' => 'from-orange-500 to-yellow-600',
-                                        ],
-                                        [
-                                            'icon' => 'fab fa-git-alt',
-                                            'name' => 'Git',
-                                            'color' => 'from-red-500 to-rose-600',
-                                        ],
-                                    ];
-                                @endphp
-
-                                @foreach ($technologies as $tech)
-                                    <div class="group text-center transform hover:scale-110 transition-all duration-300">
-                                        <div class="relative mb-3">
-                                            <div
-                                                class="absolute inset-0 bg-gradient-to-r {{ $tech['color'] }} rounded-2xl blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-300">
-                                            </div>
-                                            <div
-                                                class="relative w-20 h-20 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-white/10 transition-all duration-300">
-                                                <i
-                                                    class="{{ $tech['icon'] }} text-3xl text-transparent bg-clip-text bg-gradient-to-r {{ $tech['color'] }}"></i>
-                                            </div>
-                                        </div>
-                                        <span class="text-sm font-semibold text-white">{{ $tech['name'] }}</span>
+                            <div class="grid grid-cols-3 gap-6 mb-8">
+                                <!-- Tech 1 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-laravel text-2xl text-white"></i>
                                     </div>
-                                @endforeach
+                                    <span class="text-sm font-medium">Laravel</span>
+                                </div>
+
+                                <!-- Tech 2 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-vuejs text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">Vue.js</span>
+                                </div>
+
+                                <!-- Tech 3 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-react text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">React</span>
+                                </div>
+
+                                <!-- Tech 4 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-js text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">JavaScript</span>
+                                </div>
+
+                                <!-- Tech 5 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-php text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">PHP</span>
+                                </div>
+
+                                <!-- Tech 6 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fas fa-database text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">MySQL</span>
+                                </div>
+
+                                <!-- Tech 7 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-docker text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">Docker</span>
+                                </div>
+
+                                <!-- Tech 8 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-aws text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">AWS</span>
+                                </div>
+
+                                <!-- Tech 9 -->
+                                <div class="text-center group">
+                                    <div
+                                        class="w-16 h-16 bg-gradient-to-r from-red-500 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                        <i class="fab fa-git-alt text-2xl text-white"></i>
+                                    </div>
+                                    <span class="text-sm font-medium">Git</span>
+                                </div>
                             </div>
 
                             <!-- Additional Skills -->
-                            <div class="mt-10 pt-8 border-t border-white/10">
-                                <h4 class="text-lg font-semibold text-white mb-4 text-center">Also Experienced With</h4>
-                                <div class="flex flex-wrap justify-center gap-3">
-                                    @foreach (['Tailwind CSS', 'Bootstrap', 'Redux', 'GraphQL', 'MongoDB', 'PostgreSQL', 'Redis', 'Socket.io'] as $tool)
-                                        <span
-                                            class="px-4 py-2 backdrop-blur-xl bg-white/5 border border-white/10 rounded-full text-sm text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-300 cursor-default">
-                                            {{ $tool }}
-                                        </span>
-                                    @endforeach
+                            <div class="pt-6 border-t border-gray-700">
+                                <h4 class="text-lg font-semibold mb-4 text-center">Also Experienced With</h4>
+                                <div class="flex flex-wrap justify-center gap-2">
+                                    <span class="px-3 py-1 glass text-xs rounded-full">Tailwind CSS</span>
+                                    <span class="px-3 py-1 glass text-xs rounded-full">Bootstrap</span>
+                                    <span class="px-3 py-1 glass text-xs rounded-full">Redux</span>
+                                    <span class="px-3 py-1 glass text-xs rounded-full">GraphQL</span>
+                                    <span class="px-3 py-1 glass text-xs rounded-full">MongoDB</span>
+                                    <span class="px-3 py-1 glass text-xs rounded-full">PostgreSQL</span>
+                                    <span class="px-3 py-1 glass text-xs rounded-full">Redis</span>
+                                    <span class="px-3 py-1 glass text-xs rounded-full">Socket.io</span>
                                 </div>
                             </div>
                         </div>
@@ -801,83 +920,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-gray-400 py-16 border-t border-white/10">
-        <div class="container mx-auto px-4">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid md:grid-cols-4 gap-12 mb-12">
-                    <!-- Brand -->
-                    <div class="md:col-span-2">
-                        <h3
-                            class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-4">
-                            Alex Morgan
-                        </h3>
-                        <p class="text-gray-400 mb-6 max-w-md">
-                            Full Stack Developer passionate about creating exceptional digital experiences with modern
-                            technologies.
-                        </p>
-                        <div class="flex gap-4">
-                            @foreach ([['icon' => 'fab fa-github', 'gradient' => 'from-gray-500 to-gray-700'], ['icon' => 'fab fa-linkedin', 'gradient' => 'from-blue-500 to-blue-700'], ['icon' => 'fab fa-twitter', 'gradient' => 'from-sky-400 to-sky-600'], ['icon' => 'fab fa-dribbble', 'gradient' => 'from-pink-500 to-pink-700']] as $social)
-                                <a href="#"
-                                    class="group relative w-12 h-12 backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-white/10 transition-all duration-300 hover:scale-110 overflow-hidden">
-                                    <i
-                                        class="{{ $social['icon'] }} text-lg relative z-10 text-gray-400 group-hover:text-white transition-colors"></i>
-                                    <div
-                                        class="absolute inset-0 bg-gradient-to-r {{ $social['gradient'] }} opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    </div>
-                                </a>
-                            @endforeach
-                        </div>
-                    </div>
 
-                    <!-- Quick Links -->
-                    <div>
-                        <h4 class="text-white font-bold mb-4">Quick Links</h4>
-                        <ul class="space-y-3">
-                            @foreach (['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contact'] as $link)
-                                <li>
-                                    <a href="#"
-                                        class="hover:text-white transition-colors inline-flex items-center gap-2 group">
-                                        <i
-                                            class="fas fa-chevron-right text-xs text-purple-400 group-hover:translate-x-1 transition-transform"></i>
-                                        {{ $link }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-
-                    <!-- Services -->
-                    <div>
-                        <h4 class="text-white font-bold mb-4">Services</h4>
-                        <ul class="space-y-3">
-                            @foreach (['Web Development', 'Mobile Apps', 'UI/UX Design', 'Consulting', 'DevOps', 'Support'] as $service)
-                                <li>
-                                    <a href="#"
-                                        class="hover:text-white transition-colors inline-flex items-center gap-2 group">
-                                        <i
-                                            class="fas fa-chevron-right text-xs text-purple-400 group-hover:translate-x-1 transition-transform"></i>
-                                        {{ $service }}
-                                    </a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Bottom Bar -->
-                <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-sm">
-                        © 2025 Alex Morgan. All rights reserved.
-                    </p>
-                    <div class="flex gap-6 text-sm">
-                        <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                        <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 @endsection
 
 @push('styles')

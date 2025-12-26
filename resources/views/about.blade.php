@@ -4,7 +4,124 @@
 
 @section('content')
     <!-- About Hero -->
-    <section class="py-20 bg-white">
+    <section id="about" class="py-24 bg-slate-900 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+
+        <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Left Column -->
+                    <div data-aos="fade-right">
+                        <div class="inline-flex items-center gap-3 px-4 py-2 glass rounded-full mb-6">
+                            <i class="fas fa-user text-purple-400"></i>
+                            <span class="font-medium">About Me</span>
+                        </div>
+
+                        <h2 class="section-heading text-4xl md:text-5xl font-bold mb-8">
+                            <span class="text-white">Crafting Digital</span>
+                            <span class="block text-gradient">Experiences</span>
+                        </h2>
+
+                        <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                            With over 5 years of experience in web development, I specialize in building robust, scalable
+                            applications using modern technologies. My passion lies in solving complex problems and creating
+                            efficient solutions that drive business growth.
+                        </p>
+
+                        <p class="text-gray-300 mb-10 leading-relaxed">
+                            I believe in writing clean, maintainable code and following best practices. My expertise spans
+                            across the full stack, from designing responsive UIs with Vue.js/React to building powerful
+                            backends with Laravel and Node.js.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                    <span class="font-medium">Clean Code</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                    <span class="font-medium">Fast Delivery</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                    <span class="font-medium">Responsive Design</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                    <span class="font-medium">SEO Friendly</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Timeline -->
+                    <div data-aos="fade-left">
+                        <div class="glass rounded-3xl p-8">
+                            <h3 class="text-2xl font-bold mb-8 text-center">My Journey</h3>
+
+                            <div class="space-y-8">
+                                <!-- Timeline Item 1 -->
+                                <div class="relative pl-10">
+                                    <div
+                                        class="absolute left-0 top-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                    <div
+                                        class="absolute left-3 top-6 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-transparent">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">2020 -
+                                            Present</span>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-2">Senior Full Stack Developer</h4>
+                                    <p class="text-gray-400">Leading development teams and architecting enterprise
+                                        solutions.</p>
+                                </div>
+
+                                <!-- Timeline Item 2 -->
+                                <div class="relative pl-10">
+                                    <div
+                                        class="absolute left-0 top-0 w-6 h-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
+                                    </div>
+                                    <div
+                                        class="absolute left-3 top-6 bottom-0 w-0.5 bg-gradient-to-b from-pink-500 to-transparent">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <span class="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">2018 -
+                                            2020</span>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-2">Full Stack Developer</h4>
+                                    <p class="text-gray-400">Built and maintained multiple web applications using Laravel
+                                        and Vue.js.</p>
+                                </div>
+
+                                <!-- Timeline Item 3 -->
+                                <div class="relative pl-10">
+                                    <div
+                                        class="absolute left-0 top-0 w-6 h-6 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <span class="px-3 py-1 bg-pink-500/20 text-pink-300 text-xs rounded-full">2016 -
+                                            2018</span>
+                                    </div>
+                                    <h4 class="text-xl font-semibold mb-2">Web Developer</h4>
+                                    <p class="text-gray-400">Started career with frontend development and basic backend
+                                        skills.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
@@ -51,10 +168,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Timeline -->
-    <section class="py-20 bg-gray-50">
+    {{-- <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">My Journey</h2>
 
@@ -130,5 +247,5 @@
                 @endforeach
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
