@@ -51,18 +51,18 @@
                         <!-- Description -->
                         <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">
                             I build <span class="text-purple-400 font-semibold">scalable web applications</span> using
-                            Laravel, Vue.js, and modern technologies. Passionate about clean code, performance optimization,
+                            Laravel, PHP, and modern technologies. Passionate about clean code, performance optimization,
                             and creating exceptional user experiences.
                         </p>
 
                         <!-- Stats -->
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10 stats-grid">
                             <div class="glass p-6 rounded-2xl hover-lift transition-all duration-300">
-                                <div class="text-3xl font-bold text-gradient mb-2">50+</div>
+                                <div class="text-3xl font-bold text-gradient mb-2">5+</div>
                                 <div class="text-gray-400 text-sm uppercase tracking-wider">Projects</div>
                             </div>
                             <div class="glass p-6 rounded-2xl hover-lift transition-all duration-300">
-                                <div class="text-3xl font-bold text-gradient mb-2">5+</div>
+                                <div class="text-3xl font-bold text-gradient mb-2">1</div>
                                 <div class="text-gray-400 text-sm uppercase tracking-wider">Years Exp</div>
                             </div>
                             <div class="glass p-6 rounded-2xl hover-lift transition-all duration-300">
@@ -73,12 +73,12 @@
 
                         <!-- CTA Buttons -->
                         <div class="flex flex-wrap gap-4">
-                            <a href="#portfolio"
+                            <a href="{{ route('portfolio') }}"
                                 class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white hover-glow hover-lift transition-all duration-300 inline-flex items-center gap-3">
                                 <span>View My Work</span>
                                 <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                             </a>
-                            <a href="#contact"
+                            <a href="{{ route('contact') }}"
                                 class="group px-8 py-4 glass rounded-full font-semibold text-white hover:bg-white/10 transition-all duration-300 inline-flex items-center gap-3">
                                 <i class="fas fa-paper-plane"></i>
                                 <span>Get In Touch</span>
@@ -125,23 +125,23 @@
                                 <!-- Profile Info -->
                                 <div class="text-center space-y-4">
                                     <h3 class="text-2xl font-bold text-white">Shah Nawaz</h3>
-                                    <p class="text-purple-300 font-medium">Senior Full Stack Developer</p>
+                                    <p class="text-purple-300 font-medium">Junior Full Stack Developer</p>
                                     <p class="text-gray-400 text-sm">📍 Gurguri Karak, KPK Pakistan</p>
 
                                     <!-- Tech Stack -->
                                     <div class="flex flex-wrap justify-center gap-2 pt-4">
-                                        @foreach (['Laravel', 'Vue.js', 'React', 'Node.js', 'MySQL', 'Tailwind', 'AWS'] as $tech)
+                                        @foreach (['Html', 'CSS', 'JS', 'Node.js', 'MySQL', 'Tailwind', 'PHP', 'Laravel'] as $tech)
                                             <span class="px-3 py-1 glass text-xs rounded-full">{{ $tech }}</span>
                                         @endforeach
                                     </div>
 
                                     <!-- Social Links -->
                                     <div class="flex justify-center gap-4 pt-6">
-                                        <a href="#"
+                                        <a href="https://github.com/shahnawazktk"
                                             class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
                                             <i class="fab fa-github"></i>
                                         </a>
-                                        <a href="#"
+                                        <a href="https://www.linkedin.com/in/shahnawaz90/"
                                             class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
                                             <i class="fab fa-linkedin"></i>
                                         </a>
@@ -149,9 +149,9 @@
                                             class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
                                             <i class="fab fa-twitter"></i>
                                         </a>
-                                        <a href="#"
+                                        <a href="https://wa.me/923499088073"
                                             class="w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/10 transition-colors">
-                                            <i class="fab fa-codepen"></i>
+                                            <i class="fab fa-whatsapp"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -164,7 +164,8 @@
 
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <a href="#about" class="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
+            <a href="{{ route('about') }}"
+                class="flex flex-col items-center text-gray-400 hover:text-white transition-colors">
                 <span class="text-sm mb-2">Scroll Down</span>
                 <div class="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center p-1">
                     <div class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
@@ -320,26 +321,39 @@
                 </p>
             </div>
 
+            @php
+                $techStack = [
+                    // You have a few options for the array structure:
+                    // OPTION 1: Flat array (simpler for your current layout)
+                    [
+                        ['icon' => 'fab fa-html5', 'name' => 'HTML5', 'color' => 'text-orange-500'],
+                        ['icon' => 'fab fa-css3-alt', 'name' => 'CSS3', 'color' => 'text-blue-500'],
+                        ['icon' => 'fab fa-js', 'name' => 'JavaScript', 'color' => 'text-yellow-500'],
+                        ['icon' => 'fab fa-vuejs', 'name' => 'Vue.js', 'color' => 'text-green-500'],
+                        // ['icon' => 'fab fa-react', 'name' => 'React', 'color' => 'text-blue-400'],
+                        // ['icon' => 'fab fa-angular', 'name' => 'Angular', 'color' => 'text-red-600'],
+                        ['icon' => 'fab fa-bootstrap', 'name' => 'Bootstrap', 'color' => 'text-purple-500'],
+                        ['icon' => 'devicon-tailwindcss-plain', 'name' => 'Tailwind CSS', 'color' => 'text-teal-400'],
+                        ['icon' => 'fab fa-sass', 'name' => 'SASS/SCSS', 'color' => 'text-pink-500'],
+                        ['icon' => 'fab fa-php', 'name' => 'PHP', 'color' => 'text-indigo-400'],
+                        ['icon' => 'fab fa-laravel', 'name' => 'Laravel', 'color' => 'text-red-500'],
+                        ['icon' => 'fab fa-node-js', 'name' => 'Node.js', 'color' => 'text-green-400'],
+                        ['icon' => 'fas fa-database', 'name' => 'MySQL', 'color' => 'text-blue-600'],
+                        // ['icon' => 'fas fa-database', 'name' => 'PostgreSQL', 'color' => 'text-blue-400'],
+                        // ['icon' => 'fab fa-docker', 'name' => 'Docker', 'color' => 'text-blue-500'],
+                        // ['icon' => 'fab fa-aws', 'name' => 'AWS', 'color' => 'text-orange-500'],
+                        ['icon' => 'fab fa-git-alt', 'name' => 'Git', 'color' => 'text-red-400'],
+                        ['icon' => 'fab fa-github', 'name' => 'GitHub', 'color' => 'text-gray-200'],
+                        ['icon' => 'fab fa-npm', 'name' => 'NPM', 'color' => 'text-red-600'],
+                        // ['icon' => 'fab fa-yarn', 'name' => 'Yarn', 'color' => 'text-blue-500'],
+                        ['icon' => 'fab fa-wordpress', 'name' => 'WordPress', 'color' => 'text-blue-600'],
+                    ],
+                ];
+            @endphp
+
             <!-- Tech Icons -->
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
-                @php
-                    $techStack = [
-                        ['icon' => 'fab fa-laravel', 'name' => 'Laravel', 'color' => 'text-red-500'],
-                        ['icon' => 'fab fa-vuejs', 'name' => 'Vue.js', 'color' => 'text-green-500'],
-                        ['icon' => 'fab fa-react', 'name' => 'React', 'color' => 'text-blue-400'],
-                        ['icon' => 'fab fa-js', 'name' => 'JavaScript', 'color' => 'text-yellow-500'],
-                        ['icon' => 'fab fa-php', 'name' => 'PHP', 'color' => 'text-indigo-400'],
-                        ['icon' => 'fas fa-database', 'name' => 'MySQL', 'color' => 'text-blue-600'],
-                        ['icon' => 'fab fa-docker', 'name' => 'Docker', 'color' => 'text-blue-500'],
-                        ['icon' => 'fab fa-aws', 'name' => 'AWS', 'color' => 'text-orange-500'],
-                        ['icon' => 'fab fa-git-alt', 'name' => 'Git', 'color' => 'text-red-400'],
-                        ['icon' => 'fab fa-node-js', 'name' => 'Node.js', 'color' => 'text-green-400'],
-                        ['icon' => 'fab fa-bootstrap', 'name' => 'Bootstrap', 'color' => 'text-purple-500'],
-                        ['icon' => 'fab fa-npm', 'name' => 'NPM', 'color' => 'text-red-600'],
-                    ];
-                @endphp
-
-                @foreach ($techStack as $tech)
+                @foreach ($techStack[0] as $tech)
                     <div class="text-center group" data-aos="fade-up" data-aos-delay="{{ $loop->index * 50 }}">
                         <div class="relative mb-4">
                             <div
@@ -354,6 +368,31 @@
                     </div>
                 @endforeach
             </div>
+            <!-- OPTIONAL: If you want categories, use this approach instead -->
+
+            {{-- <div class="space-y-16">
+                @foreach ($techStack as $category => $technologies)
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-8 text-white text-center capitalize">{{ ucfirst($category) }}</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+                            @foreach ($technologies as $tech)
+                                <div class="text-center group" data-aos="fade-up" data-aos-delay="{{ $loop->index * 50 }}">
+                                    <div class="relative mb-4">
+                                        <div
+                                            class="absolute inset-0 {{ $tech['color'] }} rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300">
+                                        </div>
+                                        <div
+                                            class="relative w-20 h-20 glass rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-all duration-300">
+                                            <i class="{{ $tech['icon'] }} {{ $tech['color'] }} text-3xl"></i>
+                                        </div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-white">{{ $tech['name'] }}</span>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                @endforeach
+            </div> --}}
         </div>
     </section>
 
@@ -747,14 +786,14 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="mailto:shahnawaz@example.com"
+                    <a href="mailto:shahnawazktk713@gmail.com"
                         class="group px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-semibold text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
                         <i class="fas fa-envelope"></i>
                         <span>Email Me</span>
                         <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
                     </a>
 
-                    <a href="https://wa.me/923001234567" target="_blank"
+                    <a href="https://wa.me/923499088073" target="_blank"
                         class="group px-10 py-5 glass rounded-full font-semibold text-white hover:bg-white/10 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3">
                         <i class="fab fa-whatsapp"></i>
                         <span>WhatsApp</span>
@@ -767,13 +806,13 @@
                     <div class="flex flex-col sm:flex-row justify-center gap-8">
                         <div class="flex items-center gap-3">
                             <i class="fas fa-phone text-purple-400"></i>
-                            <a href="tel:+923001234567" class="text-gray-300 hover:text-white transition-colors">+92 300
-                                1234567</a>
+                            <a href="tel:+923499088073" class="text-gray-300 hover:text-white transition-colors">+92 349
+                                9088073</a>
                         </div>
                         <div class="flex items-center gap-3">
                             <i class="fas fa-envelope text-purple-400"></i>
-                            <a href="mailto:shahnawaz@example.com"
-                                class="text-gray-300 hover:text-white transition-colors">shahnawaz@example.com</a>
+                            <a href="mailto:shahnawazktk713@gmail.com"
+                                class="text-gray-300 hover:text-white transition-colors">shahnawazktk713@gmail.com</a>
                         </div>
                     </div>
                 </div>
